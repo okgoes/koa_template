@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>类型</th>
+                        <th>长度</th>
+                        <th>小数点</th>
+                        <th>允许空值</th>
+                        <th>是否主键</th>
+                        <th>意义</th>
+                        <th>增加行操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">int</option>
+                                <option value="">varchar</option>
+                                <option value="">tiny</option>
+                                <option value="">varchar</option>
+                                <option value="">varchar</option>
+                            </select>
+                        </td>
+                        <td><input type="number" name="" id=""></td>
+                        <td><input type="number" name="" id=""></td>
+                        <td><input name='isAllowEmpty' type="checkbox" value="1"></td>
+                        <td><input name='isPrimary' type="checkbox" value="1"></td>
+                        <td><input type="text"></td>
+                        <td><button class="btn btn-primary btn-add-rows">增加</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(function() {
+    $('.btn-add-rows').bind('click',function(){
+        addRows(this);
+    });
+    function addRows(obj) {
+        $(obj).parent().parent().parent().append('<tr>' + $(obj).parent().parent().html() + '</tr>');
+        $(obj).remove();
+        $('.btn-add-rows').bind('click',function(){
+            addRows(this);
+        });
+    }
+});
+</script>

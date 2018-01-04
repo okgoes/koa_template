@@ -1,0 +1,21 @@
+{
+    "name": "",
+    "url": "",
+    "method": "",
+    "rows": [
+        {
+            "name": "",
+            "type": "",
+            "isMust": "",
+            "comment": "",
+            "remarks": ""
+        }
+    ],
+    "results": [
+        {
+            "name": "", //字段名称
+            "value": "", // 取值
+            "comment": "" // 说明
+        }
+    ]
+}
